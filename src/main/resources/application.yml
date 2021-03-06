@@ -1,0 +1,45 @@
+server:
+  port: 9090
+  servlet:
+    context-path: /api
+
+springdoc:
+  packagesToScan: com.waes.demo.infrastructure.api
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+
+spring:
+  jackson:
+    default-property-inclusion: non_null
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    url: jdbc:h2:mem:waes_db
+    driverClassName: org.h2.Driver
+    username: luis
+    password: waes
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    properties.hibernate.format_sql: true
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+
+logging:
+  level:
+    root: INFO
+    com.waes: INFO
+    org.hibernate.SQL: ERROR
+    org.hibernate.type.descriptor.sql: ERROR
+
+
+info:
+  project:
+    version: 0.0.1
+    title: Demo-Application-WAES-API
+    description: This is the Demo Application API created by Luis Eduardo Patiño

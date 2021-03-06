@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;MODE=MySQL;DATABASE_TO_LOWER=TRUE;DB_CLOSE_DELAY=-1
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
+info:
+  project:
+    version: 0.0.1
+    title: Demo-Application-WAES-API
+    description: This is the Demo Application API created by Luis Eduardo Patiño
